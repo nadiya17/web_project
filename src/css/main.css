@@ -1,0 +1,36 @@
+/* -------------------------------
+Main style file
+--------------------------------*/
+
+/* Put your vendor styles here */
+
+@import "../../node_modules/normalize.css/normalize.css";
+@import "../../node_modules/bootstrap/dist/css/bootstrap.css";
+@import "../../node_modules/slick-carousel/slick/slick.css";
+/* @import "../../node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css"; */
+@import "../../node_modules/bootstrap-select/dist/css/bootstrap-select.min.css";
+
+/* Put you custom styles below */
+
+@import "./general/_fonts.css";
+@import "./general/_typography.pcss";
+@import "./general/_general.pcss";
+@import "./general/_header.pcss";
+@import "./general/_footer.pcss";
+
+
+/* Components */
+
+@import "./components/_main-top.pcss";
+@import "./components/_main-items.pcss";
+@import "./components/_mixin-main-item.pcss";
+@import "./components/_main-banner.pcss";
+@import "./components/_main-feautured-product.pcss";
+@import "./components/_main-underfooter.pcss";
+
+@import "./components/_category-landing.pcss";
+@import "./components/_category-landing-items.pcss";
+@import "./components/_mixin-cl-item.pcss";
+
+@import "./components/not_found_container.pcss";
+@import "./components/_product-detail.pcss";

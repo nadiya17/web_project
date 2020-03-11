@@ -1,0 +1,71 @@
+/* Gotham Pro */
+
+@font-face {
+  font-family: 'Gotham Pro';
+  font-weight: normal;
+  font-style: normal;
+  font-path: "/css/fonts/GothamPro/GothamPro";
+}
+
+@font-face {
+  font-family: 'Gotham Pro';
+  font-weight: 500;
+  font-style: italic;
+  font-path: "/css/fonts/GothamPro/GothamPro-MediumItalic";
+}
+
+@font-face {
+  font-family: 'Gotham Pro';
+  font-weight: 300;
+  font-style: italic;
+  font-path: "/css/fonts/GothamPro/GothamPro-LightItalic";
+}
+
+@font-face {
+  font-family: 'Gotham Pro';
+  font-weight: 900;
+  font-style: italic;
+  font-path: "/css/fonts/GothamPro/GothamPro-BlackItalic";
+}
+
+@font-face {
+  font-family: 'Gotham Pro';
+  font-weight: normal;
+  font-style: italic;
+  font-path: "/css/fonts/GothamPro/GothamPro-Italic";
+}
+
+@font-face {
+  font-family: 'Gotham Pro';
+  font-weight: bold;
+  font-style: normal;
+  font-path: "/css/fonts/GothamPro/GothamPro-Bold";
+}
+
+@font-face {
+  font-family: 'Gotham Pro';
+  font-weight: 300;
+  font-style: normal;
+  font-path: "/css/fonts/GothamPro/GothamPro-Light";
+}
+
+@font-face {
+  font-family: 'Gotham Pro';
+  font-weight: 900;
+  font-style: normal;
+  font-path: "/css/fonts/GothamPro/GothamPro-Black";
+}
+
+@font-face {
+  font-family: 'Gotham Pro';
+  font-weight: 500;
+  font-style: normal;
+  font-path: "/css/fonts/GothamPro/GothamPro-Medium";
+}
+
+@font-face {
+  font-family: 'Gotham Pro';
+  font-weight: bold;
+  font-style: italic;
+  font-path: "/css/fonts/GothamPro/GothamPro-BoldItalic";
+}

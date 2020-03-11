@@ -1,0 +1,19 @@
+* {
+  box-sizing: border-box;
+}
+
+input:-webkit-autofill {
+  -webkit-animation-name: autofillAll;
+  -webkit-animation-fill-mode: both;
+}
+
+@-webkit-keyframes autofillAll {
+  to {
+    color: #000;
+    background: transparent;
+  }
+}
+
+a {
+  outline: none !important;
+}
