@@ -1,13 +1,12 @@
+'use strict';
 
-// $(document).ready(function () {
-//    /* Scroller */
-//    $(document).on('click', 'a[href^="#anchor"]', function (event) {
-//       event.preventDefault();
+$(document).ready(function () {
+   /* Scroller */
+   $(document).on('click', 'a[href^="#anchor"]', function (event) {
+      event.preventDefault();
 
-//       $('html, body').animate({
-//          scrollTop: $($.attr(this, 'href')).offset().top
-//       }, 1000);
-//    });
-
-// });
-"use strict";
+      $('html, body').animate({
+         scrollTop: $($.attr(this, 'href')).offset().top
+      }, 1000);
+   });
+});
