@@ -1,0 +1,113 @@
+.intro-area {
+    position: relative;
+    padding: 100px 0px;
+    text-align: center;
+
+    h2 {
+        font-size: 40px;
+    }
+
+    .sub-heading {
+        position: relative;
+        margin-bottom: 75px;
+        
+        &:before {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -3%;
+            width: 6%;
+            height: 1px;
+            background-color: orange;
+            z-index: 1;
+            -webkit-transition: 0.3s ease;
+            -moz-transition: 0.3s ease;
+            -ms-transition: 0.3s ease;
+            -o-transition: 0.3s ease;
+            transition: 0.3s ease;
+        }
+
+        &:hover {
+            &:before {
+                width: 24%;
+                margin-left: -12%;
+            }
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -12%;
+            width: 24%;
+            height: 1px;
+            background-color: rgba(128, 128, 128, 0.452);
+        }
+
+        p {
+            color: grey;
+            display: inline-block;
+            padding: 0px 0px 20px;
+            position: relative;
+            line-height: 24px;
+            letter-spacing: 0.025em;
+        }
+    }
+
+    .intro-block {
+        position: relative;
+        background: #f7f7f7;
+        margin: 50px 0px 0px;
+        text-align: center;
+        padding: 70px 25px 40px;
+
+        &:hover, .active {
+            background: orange;
+        }
+
+        &:hover {
+            transition: .6s ease;
+            -webkit-transition: .6s ease;
+            -moz-transition: .6s ease;
+            -ms-transition: .6s ease;
+            -o-transition: .6s ease;
+        }
+        .intro-icon {
+            position: absolute;
+            top: -31px;
+            left: 50%;
+            margin-left: -31px;
+        }
+        .fab, .fas {
+            width: 63px;
+            height: 63px;
+            font-size: 30px;
+            color: white;
+            line-height: 2;
+            background: #FF8C00;
+            border-radius: 50%;
+            box-shadow: 0px 0px 0px 10px grey;
+        }
+        &:hover .fab, &:hover .fas, .active .fab, .active .fas {
+            background: white;
+            color: orange;
+            box-shadow: 0px 0px 0px 10px orange;
+        }
+        h3 {
+            font-size: 18px;
+            color: orange;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+        p {
+            color: #505050;
+        }
+
+        &:hover h3,  &:hover p {
+            color: #f6f6f6;
+        }
+    }
+}

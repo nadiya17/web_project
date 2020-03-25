@@ -20,17 +20,7 @@ Main style file
 
 
 /* Components */
-
-@import "./components/_main-top.pcss";
-@import "./components/_main-items.pcss";
-@import "./components/_mixin-main-item.pcss";
-@import "./components/_main-banner.pcss";
-@import "./components/_main-feautured-product.pcss";
-@import "./components/_main-underfooter.pcss";
-
-@import "./components/_category-landing.pcss";
-@import "./components/_category-landing-items.pcss";
-@import "./components/_mixin-cl-item.pcss";
-
-@import "./components/not_found_container.pcss";
-@import "./components/_product-detail.pcss";
+@import "./components/_about.pcss";
+@import "./components/_slider.pcss";
+@import "./components/_contact.pcss";
+@import "./components/_registration.pcss";
