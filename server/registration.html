@@ -19,26 +19,85 @@
         <link rel="stylesheet" href="css/main.min.css" />
     </head>
     <body>
+        <style>
+            body {
+                background: orange;
+            }
+        </style>
         <div class="registration-user" id="registration">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-7">
-                        <h1 class="text-left"> Welcome to FMI site board! </h1>
-                    </div>
+            <div class="image">
+                <img src="../../img/stud3.png">
+            </div>
+            <form action="#" method="POST" id="form-box">
+                <div class="icon">
+                    <span class="fa fa-user"></span>
                 </div>
+                <div class="input">
+                    <input type="text" name="username" placeholder="Username" class="inp" required>
+                </div>
+                <div class="icon">
+                    <span class="fa fa-envelope"></span>
+                </div>
+                <div class="input">
+                    <input type="email" name="email" placeholder="Email" class="inp" required>
+                </div>
+                <div class="icon">
+                    <span class="fa fa-envelope"></span>
+                </div>
+                <div class="input-group mb-3" id="inp">
+                    <select class="custom-select" id="inputGroupSelect01">
+                        <option selected>Choose your group...</option>
+                        <option value="1">101</option>
+                        <option value="2">102</option>
+                        <option value="3">105</option>
+                        <option value="1">106</option>
+                        <option value="2">107</option>
+                        <option value="3">108</option>
+                        <option value="3">201</option>
+                        <option value="2">202</option>
+                        <option value="3">205</option>
+                        <option value="1">206</option>
+                        <option value="2">301</option>
+                        <option value="3">302</option>
+                        <option value="3">307</option>
+                        <option value="3">308</option>
+                        <option value="2">309</option>
+                        <option value="3">311</option>
+                        <option value="1">322</option>
+                        <option value="2">346</option>
+                        <option value="3">401</option>
+                        <option value="3">402</option>
+                        <option value="3">407</option>
+                        <option value="2">408</option>
+                        <option value="3">409</option>
+                        <option value="1">411</option>
+                        <option value="2">422</option>
+                        <option value="3">446</option>
+                        <option value="3">501</option>
+                        <option value="3">502</option>
+                        <option value="2">505</option>
+                        <option value="3">506</option>
+                        <option value="1">507</option>
+                    </select>
+                </div>
+                <div class="icon">
+                    <span class="fa fa-lock"></span>
+                </div>
+                <div class="input">
+                    <input type="password" name="password" placeholder="Password" class="inp" required>
+                </div>
+                <div class="icon">
+                    <span class="fa fa-lock"></span>
+                </div>
+                <div class="input">
+                    <input type="password" name="password" placeholder="Re-Type Password" class="inp" required>
+                </div>
+                <input type="submit" name="submit" value="REGISTER NOW" class="sub-btn">
+            </form>
+            <div class="footer">
+                <p>Already have an account? &nbsp; <a href="#">Login</a></p>
             </div>
         </div>
-        <footer>
-            <div class="container">
-                <div class="footer-col"><span>Copyright © 2020</span></div>
-                <div class="footer-col">
-                    <div class="social-bar-wrap">
-                        <a title="Facebook" href="https://www.facebook.com/fmi.org.ua/" target="_blank"><i class="fab fa-facebook-square"></i></a>
-                        <a title="Instagram" href="https://instagram.com/m.__i__.f?igshid=1mxedp3mf0m26" target="_blank"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-        </footer>
         <div class="scripts">
             <!-- Set JS assets-->
             <script src="js/vendor-bundle.min.js"></script>
