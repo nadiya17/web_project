@@ -24,3 +24,4 @@ Main style file
 @import "./components/_slider.pcss";
 @import "./components/_contact.pcss";
 @import "./components/_registration.pcss";
+@import "./components/_login.pcss";

@@ -11,6 +11,14 @@
 
  });
 
+ // choose only one choice in checkbox
+
+ $('#group input:checkbox').click(function(){
+	if ($(this).is(':checked')) {
+		 $('#group input:checkbox').not(this).prop('checked', false);
+	}
+});
+
 
 
 

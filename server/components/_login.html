@@ -1,0 +1,35 @@
+<div class="login-user" id="login">
+    <div class="image">
+        <img src="../../img/stud3.png">
+    </div>
+    <form action="#" method="POST" id="form-box">
+        <div class="icon">
+            <span class="fa fa-envelope"></span>
+        </div>
+        <div class="input-l">
+            <input type="email" name="email" placeholder="Email" class="inp" required>
+        </div>
+        <div class="icon">
+            <span class="fa fa-lock"></span>
+        </div>
+        <div class="input-l">
+            <input type="password" name="password" placeholder="Password" class="inp" required>
+        </div>
+        <div class="input-l" id="group">
+            <input type="checkbox" name="checkbox" value="Student" id="St">
+            <label for="St">Student</label>
+            <input type="checkbox" name="checkbox" value="Teacher" id="Th">
+            <label for="Th">Teacher</label>
+        </div>
+        <input type="submit" name="submit" value="Sign in" class="sub-btn">
+    </form>
+</div>
+<script>
+    $('#group input:checkbox').click(function()
+    {
+        if ($(this).is(':checked'))
+        {
+            $('#group input:checkbox').not(this).prop('checked', false);
+        }
+    });
+</script>
