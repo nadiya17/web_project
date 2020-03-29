@@ -25,3 +25,6 @@ Main style file
 @import "./components/_contact.pcss";
 @import "./components/_registration.pcss";
 @import "./components/_login.pcss";
+@import "./general/_stud-head.pcss";
+
+
