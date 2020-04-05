@@ -27,5 +27,8 @@ Main style file
 @import "./components/_login.pcss";
 @import "./general/_stud-head.pcss";
 @import "./components/_sub.pcss";
+@import "./components/_teach-but.pcss";
+@import "./components/_sub-teach.pcss";
+@import "./components/_kanban.pcss";
 
 
