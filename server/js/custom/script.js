@@ -2,17 +2,7 @@
 
 Application.load();
 
-//реализуем добавление заметок в колонки
-//находим все колонки
-
-//создание колонки
-//находим кнопку для добавления колонки
-document.querySelector('[data-action-addColumn]')
-//вешаем событие
-.addEventListener('click', function (event) {
-    //создаем колонку
-    var column = new Column();
-    document.querySelector('.columns').append(column.element);
-
+document.querySelector('[data-action-addColumn]').addEventListener('click', function (event) {
+    document.querySelector('.columns').append(new Column().element);
     Application.save();
 });
