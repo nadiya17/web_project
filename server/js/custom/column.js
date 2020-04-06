@@ -19,7 +19,7 @@ var Column = function () {
         element.classList.add('column');
         element.setAttribute('draggable', 'true');
         element.setAttribute('data-column-id', id ? id : Column.idCounter++);
-        element.innerHTML = '<p class="column-header">\u0412 \u043F\u043B\u0430\u043D\u0435</p>\n<div data-notes></div>\n<p class="column-footer">\n    <span data-action-addNote class="action">+ \u0414\u043E\u0431\u0430\u0432\u0438\u0442\u044C \u043A\u0430\u0440\u0442\u043E\u0447\u043A\u0443</span>\n</p>';
+        element.innerHTML = '<p class="column-header">\u0412 \u043F\u043B\u0430\u043D\u0435</p>\n<button class="remove-column" data-action-addRemove>X</button>\n<div data-notes></div>\n<p class="column-footer">\n    <span data-action-addNote class="action">+ \u0414\u043E\u0431\u0430\u0432\u0438\u0442\u044C \u043A\u0430\u0440\u0442\u043E\u0447\u043A\u0443</span>\n</p>';
         // прослушка кнопки добавления карточки
         var spanAction_addNote = element.querySelector('[data-action-addNote]');
 
@@ -34,6 +34,14 @@ var Column = function () {
             note.element.setAttribute('contenteditable', 'true');
             note.element.focus();
         });
+
+        var spanAction_addRemove = element.querySelector('[data-action-addRemove]');
+
+        spanAction_addRemove.addEventListener('click', function (event) {
+            element.remove();
+            Application.save();
+        });
+
         // редактирование заголовка столбца
         var headerElement = element.querySelector('.column-header');
         headerElement.addEventListener('dblclick', function (event) {

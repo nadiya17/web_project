@@ -10,7 +10,8 @@ class Column {
         element.setAttribute('draggable', 'true')
         element.setAttribute('data-column-id', id ? id : Column.idCounter++)
         element.innerHTML =
-`<p class="column-header">В плане</p>
+            `<p class="column-header">В плане</p>
+<button class="remove-column" data-action-addRemove>X</button>
 <div data-notes></div>
 <p class="column-footer">
     <span data-action-addNote class="action">+ Добавить карточку</span>
@@ -29,7 +30,16 @@ class Column {
             note.element.setAttribute('contenteditable', 'true')
             note.element.focus()
         })
-// редактирование заголовка столбца
+
+
+        const spanAction_addRemove = element.querySelector('[data-action-addRemove]')
+
+        spanAction_addRemove.addEventListener('click', function (event) {
+            element.remove();
+            Application.save();
+        })
+
+        // редактирование заголовка столбца
         const headerElement = element.querySelector('.column-header')
         headerElement.addEventListener('dblclick', function (event) {
             element.removeAttribute('draggable')
@@ -40,7 +50,7 @@ class Column {
         headerElement.addEventListener('blur', function (event) {
             headerElement.removeAttribute('contenteditable')
             element.setAttribute('draggable', 'true')
-// изменили заголовок - сохранили
+            // изменили заголовок - сохранили
             Application.save()
         })
         // Прослушка перетаскивания колонки
@@ -85,11 +95,11 @@ class Column {
         document
             .querySelectorAll('.note')
             .forEach(noteElement => noteElement.setAttribute('draggable', 'true'))
-// убираем класс у всех когда бросили колонку
+        // убираем класс у всех когда бросили колонку
         document
             .querySelectorAll('.column')
             .forEach(columnElement => columnElement.classList.remove('under'))
-// перетащили колонку - сохранили
+        // перетащили колонку - сохранили
         Application.save()
     }
 
@@ -97,7 +107,7 @@ class Column {
         // отменяем стандартную обработку при перетаскивании карточки в пустую колонку
         event.preventDefault()
         event.stopPropagation()
-// Если перетаскиваем колонку над собой
+        // Если перетаскиваем колонку над собой
         if (Column.dragged === this.element) {
             if (Column.dropped) {
                 Column.dropped.classList.remove('under')
@@ -121,7 +131,7 @@ class Column {
 
     drop(event) {
         event.stopPropagation()
-// если бросаем карточку
+        // если бросаем карточку
         if (Note.dragged) {
             return this.element.querySelector('[data-notes]').append(Note.dragged)
         }
@@ -131,13 +141,13 @@ class Column {
             const children = Array.from(columnsElement.children)
             const indexA = children.indexOf(this.element)
             const indexB = children.indexOf(Column.dragged)
-// меняем порядок соседних колонок в зависимости от перетаскивания 
+            // меняем порядок соседних колонок в зависимости от перетаскивания 
             if (indexA < indexB) {
                 columnsElement.insertBefore(Column.dragged, this.element)
             } else {
                 columnsElement.insertBefore(Column.dragged, this.element.nextElementSibling)
             }
-// Если тащим над пустым местом - снимаем класс UNDER у всех колонок
+            // Если тащим над пустым местом - снимаем класс UNDER у всех колонок
             document
                 .querySelectorAll('.column')
                 .forEach(columnElement => columnElement.classList.remove('under'))
