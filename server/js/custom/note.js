@@ -118,6 +118,7 @@ var Note = function () {
     }, {
         key: 'drop',
         value: function drop(event) {
+            event.stopPropagation();
             if (!Note.dragged || this.element === Note.dragged) {
                 return;
             }

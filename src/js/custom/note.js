@@ -92,6 +92,7 @@ class Note {
     }
 // отпускаем мышку над этим элементом
     drop(event) {
+        event.stopPropagation()
         if (!Note.dragged || this.element === Note.dragged) {
             return
         }
